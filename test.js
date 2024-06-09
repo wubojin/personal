@@ -1,6 +1,9 @@
 const { createServer } = require("node:http");
-const hostname = "127.0.0.1";
-const port = 3000;
+const os = require("os");
+
+// Get the hostname of the server dynamically
+const hostname = os.hostname();
+const port = 8080;
 
 const server = createServer((req, res) => {
   res.statusCode = 200;
